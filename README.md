@@ -48,3 +48,56 @@ Ensure you have Python 3.8+ installed on your system.
    ```bash
    git clone [https://github.com/yourusername/led-gesture-controller.git](https://github.com/yourusername/led-gesture-controller.git)
    cd led-gesture-controller
+   ```
+2. Install the required Python dependencies:
+
+```bash
+   pip install customtkinter pillow opencv-python mediapipe pyserial
+```
+
+### 🚀 How to Use
+1. Plug in your Arduino to your computer via USB.
+
+2. Run the Application:
+
+Bash
+``` python main.py ```
+3. Connect Hardware: Select your Arduino's COM port from the dropdown on the left panel and click "Connect Hardware".
+
+4. Start Camera: Click "Start Camera Feed".
+
+5. Map Gestures: Use the Mapping Dashboard on the right to assign actions. For example:
+
+> One Finger (Index) -> Pin 2 -> ON
+
+> Peace Sign (V) -> Pin 3 -> BLINK -> 300ms
+
+> Spider-Man Sign -> Pin ALL -> BLINK -> 100ms
+
+> Click Save Config to remember your settings for next time.
+
+### 🤟 Recognizable Gestures
+The AI engine currently recognizes the following hand poses:
+
+Fist (Closed Hand)
+
+Index (One Finger)
+
+Peace (Two Fingers)
+
+Three / Four Fingers
+
+Open Palm (High Five)
+
+Thumbs Up
+
+Rock On Sign (Index + Pinky)
+
+Spider-Man Sign (Thumb + Index + Pinky)
+
+> If an unmapped or unrecognized shape is shown, or if the hand leaves the frame, the system defaults to a safe CLEAR state, turning off all LEDs.
+
+
+
+## 📜 License
+This project is open-source and available under the MIT License. Feel free to fork, modify, and add more gestures or hardware modules!
